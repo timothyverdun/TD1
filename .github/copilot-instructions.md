@@ -1,0 +1,14 @@
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [x] Clarify Project Requirements
+- [x] Scaffold the Project
+- [x] Customize the Project
+- [x] Install Required Extensions
+- [x] Compile the Project
+- [ ] Create and Run Task
+- [ ] Launch the Project
+- [x] Ensure Documentation is Complete
+
+- Project: jeu du pendu React avec Vite en JavaScript.
+- API: `POST https://hangman.alexischarp.fr/` avec `locale=fr-FR` ou `locale=en-GB`.
+- Fonctionnalités livrées: récupération du mot, changement de langue, clavier physique et visuel, historique local, gestion d'erreurs, interface responsive.
+- Vérifications attendues: `npm run lint` puis `npm run build`.

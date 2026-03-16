@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --color-paper: #f2ebdf;
+  --color-paper-alt: #e8dfcf;
+  --color-ink: #2f3a2e;
+  --color-ink-soft: #5a6457;
+  --color-moss: #c9a24b;
+  --color-moss-dark: #be8d2b;
+  --color-bronze: #c0a179;
+  --color-clay-dark: #88553e;
+  --panel-paper: linear-gradient(165deg, rgba(249, 245, 236, 0.93), rgba(239, 231, 216, 0.92));
+  --border-soft: rgba(76, 86, 70, 0.21);
+  --font-body: 'Nunito Sans', 'Segoe UI', sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  line-height: 1.45;
+  font-weight: 400;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(201, 162, 75, 0.22), transparent 30%),
+    radial-gradient(circle at 84% 8%, rgba(192, 161, 121, 0.27), transparent 28%),
+    linear-gradient(180deg, #f7f0e5 0%, #efe4d3 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(143, 106, 31, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 106, 31, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.26), transparent 84%);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background:
+    radial-gradient(circle at 18% 72%, rgba(201, 162, 75, 0.34), transparent 38%),
+    radial-gradient(circle at 92% 24%, rgba(192, 161, 121, 0.45), transparent 36%);
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+#root {
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.2rem 0 2rem;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  line-height: 0.96;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.3rem);
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+}
+
+@media (max-width: 560px) {
+  #root {
+    width: calc(100% - 1rem);
+    padding: 0.8rem 0 1.1rem;
+  }
+}
