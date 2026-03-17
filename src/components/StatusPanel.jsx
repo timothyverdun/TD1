@@ -1,4 +1,5 @@
 const etiquettesStatut = {
+  // Fait correspondre les statuts internes du jeu avec un libelle lisible.
   error: 'Erreur',
   loading: 'Chargement',
   lost: 'Défaite',
@@ -7,6 +8,7 @@ const etiquettesStatut = {
 }
 
 const etiquettesLangue = {
+  // Centralise l'affichage des locales pour eviter de dupliquer la logique dans le JSX.
   'en-GB': 'English',
   'fr-FR': 'Français',
 }
@@ -18,6 +20,7 @@ export function StatusPanel({
   tentativesRestantes,
   statut,
 }) {
+  // On garde une valeur de repli si un nouveau statut ou une nouvelle langue arrive depuis l'API.
   const etiquetteStatut = etiquettesStatut[statut] || statut
   const labelLangue = etiquettesLangue[langue] || langue
 
@@ -44,6 +47,7 @@ export function StatusPanel({
           <div className="guesses-list">
             {lettresJouees.map((lettre) => (
               <span key={lettre} className="guess-chip">
+                {/* Respecte les regles de casse de la langue active pour l'affichage des lettres. */}
                 {lettre.toLocaleUpperCase(langue)}
               </span>
             ))}
@@ -54,6 +58,7 @@ export function StatusPanel({
       </div>
 
       {statut === 'error' ? (
+        // Le detail de l'erreur n'est affiche que si la partie n'a pas pu etre initialisee.
         <div className="error-banner" role="alert">
           <strong>Impossible de démarrer la partie.</strong>
           <p>{messageErreur}</p>
