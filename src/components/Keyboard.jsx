@@ -1,7 +1,7 @@
 import { normaliserCaractere, motContientLettre } from '../utils/gameLogic'
 
 // On découpe le clavier en 3 lignes pour l'affichage.
-const lignesClavier = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM']
+const lignesClavier = ['ABCDEFGHIJ', 'KLMNOPQRST', 'UVWXYZ']
 
 export function Keyboard({ disabled, lettresJouees, langue, auClic, mot }) {
   return (
